@@ -23,7 +23,23 @@ public class GenericTest {
         printInfos(teacherList);
         System.out.println(returnLast(studentList).getName());
         System.out.println(returnLast(teacherList));
-        
+
+        System.out.println("========Use MyUtil Class==========");
+
+        MyUtils<Student> obj1 = new MyUtils<>();
+        obj1.printInfos(studentList);
+
+        MyUtils<Teacher> obj2 = new MyUtils<>();
+        obj2.printInfos(teacherList);
+
+        MyUtils<Teacher> obj3 = new MyUtils<>();
+        try{
+            System.out.println(obj3.returnLastItemName(teacherList));
+        }catch (Exception e){
+
+        }
+
+
 
     }
 
