@@ -7,15 +7,33 @@ public class ArraysSorting {
 
         QuickSort qs = new QuickSort();
         BubleSort bs = new BubleSort();
-        as.sort(qs);
-        as.sort(bs);
+        as.sortThis(qs);
+        as.sortThis(bs);
+
+//        MyLambda myLambda = () -> System.out.println("Sorting the array");
+//        Sorting myLambda2 = () -> System.out.println("Sorting the array2");
+
+        Sorting noLambda = new QuickSort();
+        noLambda.sort();
+
+        System.out.println("===============with Lambda===========");
+        Sorting quicksort = () -> System.out.println("Quick sorting with lamb");
+        as.sortThis(quicksort);
+
+        Sorting bublesort = () -> System.out.println("Buble sorting with lamb");
+        as.sortThis(bublesort);
+
 
     }
 
 
-    private void sort(Sorting sorting){
+    private void sortThis(Sorting sorting){
         sorting.sort();
     }
 
 }
+
+//interface MyLambda{
+//    void print();
+//}
 
