@@ -3,13 +3,13 @@ package reviewInheritance;
 public class StaticDemo {
 
     public static void main(String[] args) {
-        System.out.println(Order.result +"");
-        System.out.println(Order.result +"");
+        System.out.println(Order.result +""); //ur
+        System.out.println(Order.result +""); //ur
 
-        new Order();
-        new Order();
+        new Order(); //urc
+        new Order(); //urcc
 
-        System.out.println(Order.result +"");
+        System.out.println(Order.result +""); //urcc
 
     }
 }
