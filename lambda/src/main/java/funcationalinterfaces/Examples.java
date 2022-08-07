@@ -47,6 +47,10 @@ public class Examples {
         Supplier<Double> sup2 = () -> Math.random();
         System.out.println(sup2.get()); //ram
 
+        System.out.println("==============Use Function for Predicare?");
+        Function<Integer, Boolean> remainder = i -> i<3;
+        System.out.println(remainder.apply(3));
+
 
     }
 }

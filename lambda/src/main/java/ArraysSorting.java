@@ -23,12 +23,17 @@ public class ArraysSorting {
         Sorting bublesort = () -> System.out.println("Buble sorting with lamb");
         as.sortThis(bublesort);
 
-
+        System.out.println("=============Another generic method===========");
+        as.sortThat(qs);
     }
 
 
     private void sortThis(Sorting sorting){
         sorting.sort();
+    }
+
+    private <T extends Sorting> void sortThat(T t){
+        t.sort();
     }
 
 }
