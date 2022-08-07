@@ -25,7 +25,7 @@ public class Demo {
         BiFunction<String, Integer, String> fn = (str, i) -> str.substring(i);
         System.out.println(fn.apply("Developer", 6));
 
-        BiFunction<String, Integer, String> fn2 = String::substring;
+        BiFunction<String, Integer, String> fn2 = String::substring; //substring is a INSTANCE method
         System.out.println(fn2.apply("Developer", 5));
 
         Consumer<Integer> display = i -> System.out.println(i);
@@ -33,6 +33,13 @@ public class Demo {
 
         Consumer<Integer> display2 = System.out::println;
         display2.accept(50);
+
+
+        System.out.println("========================Class call insstance method=================");
+
+        BiFunction<MyClass, Integer, Double> v2 = MyClass::instanceMethod;
+
+        BiFunction<String, String, String> v3 = String::concat;
 
     }
 }
