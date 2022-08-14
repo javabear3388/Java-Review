@@ -21,17 +21,24 @@ public class StateTest {
 
         List<State> states = Arrays.asList(va, tx);
 
+        System.out.println("============MAP print");
         states.stream()
                 .map(s -> s.getCity())
                 .forEach(System.out::println);
         // ==> returns Stream<List<String>>
+        //Still print 2 lists
 
+        System.out.println("==========FLATMAP print");
         states.stream()
                 .map(state -> state.getCity())
-                .flatMap(List::stream)
+                .flatMap(l -> l.stream())// List::stream
                 .forEach(System.out::println);
+        //Print One list now
 
-
+        System.out.println("==========FLATMAP print -2");
+        states.stream()
+                .flatMap(l -> l.getCity().stream())//list-> list.stream()
+                .forEach(System.out::println);
 
 
 
