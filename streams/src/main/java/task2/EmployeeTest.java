@@ -32,7 +32,7 @@ public class EmployeeTest {
                 .flatMap(List::stream)//list -> list.stream
                 .forEach(System.out::println);
 
-        System.out.println("Print phone no with FLAMAP THEN MAP");
+        System.out.println("Print phone no with FLAMAP THEN FILTER");
         EmployeeData.readAll()
                 .map(Employee::getEmpPhoneNumbers)
                 .flatMap(List::stream)//list -> list.stream

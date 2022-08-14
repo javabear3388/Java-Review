@@ -11,30 +11,30 @@ public class MatchingAndFinding {
         //ALL MATCH
         boolean isHealthy = DishData.getAll().stream()
                 .allMatch(dish -> dish.getCalories() < 1000);
-        System.out.println(isHealthy);
+        System.out.println(isHealthy); //true
 
         //ANY MATCH
-        if(DishData.getAll().stream().anyMatch(Dish::isVegetarian)){
+        if(DishData.getAll().stream().anyMatch(Dish::isVegetarian)){ //true
             System.out.println("One of the dish is veggie");
         }
 
         //NON MATCH
         boolean isHealth2 = DishData.getAll().stream().noneMatch(dish -> dish.getCalories()>=1000);
-        System.out.println(isHealth2);
+        System.out.println(isHealth2); //true
 
         //FIND ANY
         System.out.println("==============OPTIONAL (Find ANy)===========");
         Optional<Dish> dish = DishData.getAll().stream()
                 .filter(Dish::isVegetarian)
                 .findAny();
-        System.out.println(dish.get());
+        System.out.println(dish.get()); //any
 
         //FIND First
         System.out.println("==============OPTIONAL (Find First)===========");
         Optional<Dish> dish2 = DishData.getAll().stream()
                 .filter(Dish::isVegetarian)
                 .findFirst();
-        System.out.println(dish2.get());
+        System.out.println(dish2.get()); //first
 
     }
 }
