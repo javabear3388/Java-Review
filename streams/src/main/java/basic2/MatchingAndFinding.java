@@ -33,7 +33,7 @@ public class MatchingAndFinding {
         System.out.println("==============OPTIONAL (Find First)===========");
         Optional<Dish> dish2 = DishData.getAll().stream()
                 .filter(Dish::isVegetarian)
-                .findAny();
+                .findFirst();
         System.out.println(dish2.get());
 
     }
