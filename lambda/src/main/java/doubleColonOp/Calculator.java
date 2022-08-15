@@ -10,5 +10,8 @@ public class Calculator {
         System.out.println("Multiply: "+ (x*y));
     }
 
+    public Double findMultiply2(Double x, Double y){
+        return x*y;
+    }
 
 }

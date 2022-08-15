@@ -22,6 +22,10 @@ public class Demo {
         Calculate m2 = new Calculator()::findMultiply;
         m2.calculate(2, 5);
 
+//        Calculate m3 = Calculator::findMultiply2;
+        BiFunction<Double, Double, Double> mul2 = new Calculator()::findMultiply2;
+        System.out.println(mul2.apply(3.3, 4.4));
+
         BiFunction<String, Integer, String> fn = (str, i) -> str.substring(i);
         System.out.println(fn.apply("Developer", 6));
 
