@@ -26,7 +26,7 @@ public class ArrayListReview {
         // Forward Iteration
         System.out.println("Printing with Iterator Forward........");
 
-        Iterator iter= students.listIterator();
+        Iterator<Student> iter= students.listIterator();
         while(iter.hasNext()){
             System.out.println(iter.next());
         }
